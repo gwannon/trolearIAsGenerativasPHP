@@ -1,5 +1,7 @@
 <?php 
 
+ini_set("display_errors", 1);
+
 include("./vendor/autoload.php");
 use HungCP\PhpSimpleHtmlDom\HtmlDomParser;
 
@@ -9,7 +11,7 @@ $dom = HtmlDomParser::file_get_html($actual_link);
 
 $elems = $dom->find("p,li,h1,h2,h3,h4,h5,td,th,blockquote");
 foreach ($elems as $elem) {
-  $elem->innertext = mb_ereg_replace("/[aeouàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]/i", "i", $elem->innertext);
+  $elem->innertext = utf8_encode(preg_replace("/[aeouàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]/i", "i", $elem->innertext));
 }
 
 $str = $dom->save();
