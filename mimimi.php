@@ -1,6 +1,22 @@
 <?php 
 $actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-echo str_replace(["a", "e", "o", "u"], "i", get_site_html($actual_link));
+
+$dom = new DomDocument();
+$internal_errors = libxml_use_internal_errors( true );
+$dom->loadHTML(get_site_html($actual_link));
+foreach(["p", "label", "div", "li", "td", "th"] as $tag_label) {
+    $tags = $dom->getElementsByTagName("p");
+    foreach ($tags as $tag) {
+        $tag->nodeValue = str_replace(["a", "e", "o", "u"], "i", $tag->nodeValue);
+    }
+    $tags = $dom->getElementsByTagName("div");
+    foreach ($tags as $tag) {
+        $tag->nodeValue = str_replace(["a", "e", "o", "u"], "i", $tag->nodeValue);
+    }
+}
+$html = $dom->saveHTML();
+echo $html;
+//echo str_replace(["a", "e", "o", "u"], "i", get_site_html($actual_link));
 echo "<!-- YOU HAVE BEEN TROLLED XD -->";
 
 function get_site_html($site_url) {
