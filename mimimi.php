@@ -7,7 +7,7 @@ $dom->loadHTML(get_site_html($actual_link));
 foreach(["p", "label", "div", "li", "td", "th"] as $tag_label) {
     $tags = $dom->getElementsByTagName("p");
     foreach ($tags as $tag) {
-        $tag->nodeValue = str_replace(["a", "e", "o", "u"], "i", $tag->nodeValue);
+        $tag->nodeValue = str_replace("\aeouàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ\ci", "i", $tag->nodeValue);
     }
     $tags = $dom->getElementsByTagName("div");
     foreach ($tags as $tag) {
