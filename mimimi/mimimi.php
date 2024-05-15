@@ -1,22 +1,20 @@
 <?php 
+
+include("./vendor/autoload.php");
+use HungCP\PhpSimpleHtmlDom\HtmlDomParser;
+
 $actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-$dom = new DomDocument();
-$internal_errors = libxml_use_internal_errors( true );
-$dom->loadHTML(get_site_html($actual_link));
-foreach(["p", "label", "div", "li", "td", "th"] as $tag_label) {
-    $tags = $dom->getElementsByTagName("p");
-    foreach ($tags as $tag) {
-        $tag->nodeValue = str_replace("\aeouàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ\ci", "i", $tag->nodeValue);
-    }
-    $tags = $dom->getElementsByTagName("div");
-    foreach ($tags as $tag) {
-        $tag->nodeValue = str_replace(["a", "e", "o", "u"], "i", $tag->nodeValue);
-    }
+$dom = HtmlDomParser::file_get_html($actual_link);
+
+$elems = $dom->find("p,li,h1,h2,h3,h4,h5,td,th,blockquote");
+foreach ($elems as $elem) {
+  $elem->innertext = mb_ereg_replace("/[aeouàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]/i", "i", $elem->innertext);
 }
-$html = $dom->saveHTML();
-echo $html;
-//echo str_replace(["a", "e", "o", "u"], "i", get_site_html($actual_link));
+
+$str = $dom->save();
+echo $str;
+
 echo "<!-- YOU HAVE BEEN TROLLED XD -->";
 
 function get_site_html($site_url) {

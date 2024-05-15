@@ -10,3 +10,7 @@ Sistema sencillo para detectar las IAs generativas que visitan tu web y trolearl
 
 ## Fuentes 
 * https://www.ofbit.com/blog/como-proteger-tu-contenido-de-autor-de-las-insaciables-ias
+
+
+## Librerías usadas
+* https://simplehtmldom.sourceforge.io/docs/1.9/index.html

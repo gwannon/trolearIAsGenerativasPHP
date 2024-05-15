@@ -12,5 +12,5 @@ RewriteCond %{REMOTE_ADDR} ^20\.9\.164\. [OR]
 RewriteCond %{REMOTE_ADDR} ^52\.230\.152\. [OR]
 # User GPT
 RewriteCond %{REMOTE_ADDR} ^23\.98\.142\.
-RewriteRule ^(?!mimimi.php)(.*)$ /mimimi.php [L]
+RewriteRule ^(?!mimimi/mimimi.php)(.*)$ /mimimi/mimimi.php [L]
 </IfModule>
