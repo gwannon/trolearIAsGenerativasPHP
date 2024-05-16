@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+  #HTML--------------------------------------------------
   # User-agents
   RewriteCond %{HTTP_USER_AGENT} (CCBot|ChatGPT|GPTBot|anthropic-ai|Omgilibot|Omgili|FacebookBot) [OR,NC]
   # OpenIA - ChatGPT
@@ -13,5 +14,20 @@
   # User GPT
   RewriteCond %{REMOTE_ADDR} ^23\.98\.142\.
   RewriteCond %{REQUEST_URI} !\.(?:jpe?g|gif|bmp|png|tiff|css|js|ttf)$ [NC]
-  RewriteRule ^(?!mimimi/mimimi.php)(.*)$ /mimimi/mimimi.php [L]
+  RewriteRule ^(?!mimimi/(mimimi.php|mimimimigi.php))(.*)$ /mimimi/mimimi.php [L]
+
+  #IMAGES--------------------------------------------------
+  # User-agents
+  RewriteCond %{HTTP_USER_AGENT} (CCBot|ChatGPT|GPTBot|anthropic-ai|Omgilibot|Omgili|FacebookBot) [OR,NC]
+  # OpenIA - ChatGPT
+  RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^20\.15\.241\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^20\.15\.242\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^40\.83\.2\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^20\.9\.164\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^52\.230\.152\. [OR]
+  # User GPT
+  RewriteCond %{REMOTE_ADDR} ^23\.98\.142\.
+  RewriteCond %{REQUEST_URI} (\.png|\.jpg|\.gif)$ [NC]
+  RewriteRule ^(?!mimimi/(mimimi.php|mimimimigi.php))(.*)$ /mimimi/mimimimigi.php [L]
 </IfModule>
