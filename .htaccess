@@ -3,7 +3,7 @@
   RewriteBase /
   #HTML--------------------------------------------------
   # User-agents
-  RewriteCond %{HTTP_USER_AGENT} (CCBot|ChatGPT|GPTBot|anthropic-ai|Omgilibot|Omgili|FacebookBot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (CCBot|ChatGPT|GPTBot|anthropic-ai|Omgilibot|Omgili|FacebookBot|Google-Extended) [OR,NC]
   # OpenIA - ChatGPT
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.241\. [OR]
@@ -18,7 +18,7 @@
 
   #IMAGES--------------------------------------------------
   # User-agents
-  RewriteCond %{HTTP_USER_AGENT} (CCBot|ChatGPT|GPTBot|anthropic-ai|Omgilibot|Omgili|FacebookBot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (CCBot|ChatGPT|GPTBot|anthropic-ai|Omgilibot|Omgili|FacebookBot|Google-Extended) [OR,NC]
   # OpenIA - ChatGPT
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.241\. [OR]
