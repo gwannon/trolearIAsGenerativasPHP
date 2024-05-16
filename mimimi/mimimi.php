@@ -21,8 +21,8 @@ foreach ($elems as $elem) {
     if($char == '<') $control = 1;
     else if($char == '>') $control = 0;
     if($control == 0) {
-      $char = preg_replace("/[aeouàèòùáéóúâêôûãõäëöü]/", $rep, $char);
-      $char = preg_replace("/[AEOUÀÈÒÙÁÉÓÚÂÊÔÛÃÕÄËÖÜ]/", strtoupper($rep), $char);
+      $char = preg_replace("/[aeoiuàèìòùáéíóúâêîôûãõäëïöü]/", $rep, $char);
+      $char = preg_replace("/[AEIOUÀÈÌÒÙÁÉÍÓÚÂÊÎÔÛÃÕÄËÏÖÜ]/", strtoupper($rep), $char);
       $newstring .= utf8_encode($char);
     } else $newstring .= $char;
   }
