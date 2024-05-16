@@ -5,7 +5,7 @@
   # User-agents
   RewriteCond %{HTTP_USER_AGENT} (CCBot|ChatGPT|GPTBot|anthropic-ai|Omgilibot|Omgili|FacebookBot|Google-Extended|PerplexityBot) [OR,NC]
   RewriteCond %{HTTP_USER_AGENT} (Amazonbot|Applebot) [OR,NC]
-  # OpenIA - ChatGPT
+  # IPs
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.241\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.242\. [OR]
