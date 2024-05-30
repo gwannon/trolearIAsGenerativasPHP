@@ -11,9 +11,10 @@ $actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP
 
 $dom = HtmlDomParser::file_get_html($actual_link);
 
-$elems = $dom->find("p,li,h1,h2,h3,h4,h5,td,th,blockquote,button");
+
 $rand = rand(1,6);
 if($rand >= 1 && $rand <= 5) { //Sustituimos todas las vocales por una vocal al azar
+  $elems = $dom->find("p,li,h1,h2,h3,h4,h5,td,th,blockquote,a,button");
   $rep = array_rand(array_flip(["a", "e", "i", "o", "u"]));
   foreach ($elems as $elem) {
     $string = $elem->innertext;
@@ -31,6 +32,7 @@ if($rand >= 1 && $rand <= 5) { //Sustituimos todas las vocales por una vocal al 
     $elem->innertext = $newstring;
   }
 } else if($rand == 6) { //Reordenamos aleatoriamente todas las palabras
+  $elems = $dom->find("p,li,h1,h2,h3,h4,h5,td,th,blockquote,button");
   foreach ($elems as $elem) {
     $words = explode( " ", strip_tags($elem->innertext));
     shuffle($words);
