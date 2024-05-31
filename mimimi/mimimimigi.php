@@ -23,17 +23,15 @@ if($rand == 1) imagefilter($image, IMG_FILTER_NEGATE);
 else if($rand == 2) imagefilter($image, IMG_FILTER_GRAYSCALE);
 else if($rand == 3) imagefilter($image, IMG_FILTER_EMBOSS);
 
+//Pixelamos la imagen
 $height = $size[1];
 $width = $size[0];
-$pixelate_y = 5;
-$pixelate_x = 5;
-
-// start from the top-left pixel and keep looping until we have the desired effect
+$rand = rand(3,15);
+$pixelate_y = $rand;
+$pixelate_x = $rand;
 for($y = 0;$y < $height;$y += $pixelate_y+1) {
   for($x = 0;$x < $width;$x += $pixelate_x+1) {
-    // get the color for current pixel
     $rgb = imagecolorsforindex($image, imagecolorat($image, $x, $y));
-    // get the closest color from palette
     $color = imagecolorclosest($image, $rgb['red'], $rgb['green'], $rgb['blue']);
     imagefilledrectangle($image, $x, $y, $x+$pixelate_x, $y+$pixelate_y, $color);
   }       
