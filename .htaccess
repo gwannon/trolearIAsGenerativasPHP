@@ -1,6 +1,29 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  #HTML--------------------------------------------------
+  # User-agents
+  RewriteCond %{HTTP_USER_AGENT} (CCBot|ChatGPT|GPTBot|anthropic-ai|Omgilibot|Omgili|FacebookBot|Google-Extended|PerplexityBot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Amazonbot|Applebot|GoogleOther|ia_archiver|Claude-Web|ClaudeBot|Applebot-Extended|Bytespider) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (cohere-ai|Diffbot|ImagesiftBot) [OR,NC]
+  # IPs
+  RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^20\.15\.241\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^20\.15\.242\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^40\.83\.2\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^20\.9\.164\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^52\.230\.152\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^23\.98\.142\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^40\.84\.180\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^13\.65\.240\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^20\.97\.189\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^20\.161\.75\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^52\.225\.75\. [OR]
+  RewriteCond %{REMOTE_ADDR} ^52\.156\.77\.
+  RewriteCond %{REQUEST_URI} (\.css|\.scss|\.sass)$ [NC]
+  RewriteRule ^(?!mimimi/(mimimi.php|mimimimigi.php|mimimicss.php))(.*)$ /mimimi/mimimicss.php [L]
+
   #HTML--------------------------------------------------
   # User-agents
   RewriteCond %{HTTP_USER_AGENT} (CCBot|ChatGPT|GPTBot|anthropic-ai|Omgilibot|Omgili|FacebookBot|Google-Extended|PerplexityBot) [OR,NC]
@@ -21,7 +44,7 @@
   RewriteCond %{REMOTE_ADDR} ^52\.225\.75\. [OR]
   RewriteCond %{REMOTE_ADDR} ^52\.156\.77\.
   RewriteCond %{REQUEST_URI} !\.(?:jpe?g|gif|bmp|png|tiff|css|js|ttf|otf|woff|woff2|svg|webp)$ [NC]
-  RewriteRule ^(?!mimimi/(mimimi.php|mimimimigi.php))(.*)$ /mimimi/mimimi.php [L]
+  RewriteRule ^(?!mimimi/(mimimi.php|mimimimigi.php|mimimicss.php))(.*)$ /mimimi/mimimi.php [L]
 
   #IMAGES--------------------------------------------------
   # User-agents
@@ -43,5 +66,5 @@
   RewriteCond %{REMOTE_ADDR} ^52\.225\.75\. [OR]
   RewriteCond %{REMOTE_ADDR} ^52\.156\.77\. 
   RewriteCond %{REQUEST_URI} (\.png|\.jpg|\.gif)$ [NC]
-  RewriteRule ^(?!mimimi/(mimimi.php|mimimimigi.php))(.*)$ /mimimi/mimimimigi.php [L]
+  RewriteRule ^(?!mimimi/(mimimi.php|mimimimigi.php|mimimicss.php))(.*)$ /mimimi/mimimimigi.php [L]
 </IfModule>
