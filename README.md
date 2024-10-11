@@ -14,6 +14,7 @@ Sistema sencillo para detectar las IAs generativas que visitan tu web y trolearl
 * https://www.ofbit.com/blog/como-proteger-tu-contenido-de-autor-de-las-insaciables-ias
 * https://ericlathrop.com/2024/01/blocking-ai--machine-learning--bots-from-training-on-your-website-content/
 * https://frontendmasters.com/blog/blocking-ai-bots/
+* https://www.foundationwebdev.com/2023/11/which-web-crawlers-are-associated-with-ai-crawlers/
 
 
 ## Librerías usadas

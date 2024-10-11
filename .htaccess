@@ -4,7 +4,8 @@
   #HTML--------------------------------------------------
   # User-agents
   RewriteCond %{HTTP_USER_AGENT} (CCBot|ChatGPT|GPTBot|anthropic-ai|Omgilibot|Omgili|FacebookBot|Google-Extended|PerplexityBot) [OR,NC]
-  RewriteCond %{HTTP_USER_AGENT} (Amazonbot|Applebot|GoogleOther|ia_archiver|Claude-Web|ClaudeBot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Amazonbot|Applebot|GoogleOther|ia_archiver|Claude-Web|ClaudeBot|Applebot-Extended|Bytespider) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (cohere-ai|Diffbot|ImagesiftBot) [OR,NC]
   # IPs
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.241\. [OR]
@@ -25,7 +26,8 @@
   #IMAGES--------------------------------------------------
   # User-agents
   RewriteCond %{HTTP_USER_AGENT} (CCBot|ChatGPT|GPTBot|anthropic-ai|Omgilibot|Omgili|FacebookBot|Google-Extended|PerplexityBot) [OR,NC]
-  RewriteCond %{HTTP_USER_AGENT} (Amazonbot|Applebot|GoogleOther|ia_archiver|Claude-Web|ClaudeBot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Amazonbot|Applebot|GoogleOther|ia_archiver|Claude-Web|ClaudeBot|Applebot-Extended|Bytespider) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (cohere-ai|Diffbot|ImagesiftBot) [OR,NC]
   # IPs
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.241\. [OR]
