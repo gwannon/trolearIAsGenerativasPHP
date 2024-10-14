@@ -21,8 +21,9 @@
   RewriteCond %{REMOTE_ADDR} ^20\.161\.75\. [OR]
   RewriteCond %{REMOTE_ADDR} ^52\.225\.75\. [OR]
   RewriteCond %{REMOTE_ADDR} ^52\.156\.77\.
-  RewriteCond %{REQUEST_URI} (\.css|\.scss|\.sass)$ [NC]
-  RewriteRule ^(?!mimimi/(mimimi.php|mimimimigi.php|mimimicss.php))(.*)$ /mimimi/mimimicss.php [L]
+  RewriteCond %{REQUEST_URI} !\.(?:jpe?g|gif|bmp|png|tiff|css|js|ttf|otf|woff|woff2|svg|webp)$ [NC]
+  RewriteRule ^(?!mimimi/(mimimi.php|mimimimigi.php|mimimicss.php))(.*)$ /mimimi/mimimi.php [L]
+
 
   #HTML--------------------------------------------------
   # User-agents
@@ -43,8 +44,8 @@
   RewriteCond %{REMOTE_ADDR} ^20\.161\.75\. [OR]
   RewriteCond %{REMOTE_ADDR} ^52\.225\.75\. [OR]
   RewriteCond %{REMOTE_ADDR} ^52\.156\.77\.
-  RewriteCond %{REQUEST_URI} !\.(?:jpe?g|gif|bmp|png|tiff|css|js|ttf|otf|woff|woff2|svg|webp)$ [NC]
-  RewriteRule ^(?!mimimi/(mimimi.php|mimimimigi.php|mimimicss.php))(.*)$ /mimimi/mimimi.php [L]
+  RewriteCond %{REQUEST_URI} (\.css|\.scss|\.sass)$ [NC]
+  RewriteRule ^(?!mimimi/(mimimi.php|mimimimigi.php|mimimicss.php))(.*)$ /mimimi/mimimicss.php [L]
 
   #IMAGES--------------------------------------------------
   # User-agents
