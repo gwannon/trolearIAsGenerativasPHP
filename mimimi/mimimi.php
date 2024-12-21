@@ -1,6 +1,8 @@
 <?php 
 
-ini_set("display_errors", 1);
+ini_set("display_errors", 0);
+
+sleep(2);
 
 define('DEFAULT_BR_TEXT', "\r\n");
 
