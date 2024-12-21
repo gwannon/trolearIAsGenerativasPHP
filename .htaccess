@@ -10,6 +10,7 @@
   RewriteCond %{HTTP_USER_AGENT} (Kangaroo\sBot|Meta-ExternalAgent|Meta-ExternalFetcher|OAI-SearchBot|Omgili|Omgilibot|PanguBot|PerplexityBot) [OR,NC]
   RewriteCond %{HTTP_USER_AGENT} (PetalBot|Scrapy|Sidetrade\sindexer\sbot|Timpibot|VelenPublicWebCrawler|Webzio-Extended|YouBot) [OR,NC]
   # IPs
+  RewriteCond %{REMOTE_ADDR} ^44\.221\.181\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.241\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.242\. [OR]
@@ -35,6 +36,7 @@
   RewriteCond %{HTTP_USER_AGENT} (Kangaroo\sBot|Meta-ExternalAgent|Meta-ExternalFetcher|OAI-SearchBot|Omgili|Omgilibot|PanguBot|PerplexityBot) [OR,NC]
   RewriteCond %{HTTP_USER_AGENT} (PetalBot|Scrapy|Sidetrade\sindexer\sbot|Timpibot|VelenPublicWebCrawler|Webzio-Extended|YouBot) [OR,NC]
   # IPs
+  RewriteCond %{REMOTE_ADDR} ^44\.221\.181\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.241\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.242\. [OR]
@@ -59,6 +61,7 @@
   RewriteCond %{HTTP_USER_AGENT} (Kangaroo\sBot|Meta-ExternalAgent|Meta-ExternalFetcher|OAI-SearchBot|Omgili|Omgilibot|PanguBot|PerplexityBot) [OR,NC]
   RewriteCond %{HTTP_USER_AGENT} (PetalBot|Scrapy|Sidetrade\sindexer\sbot|Timpibot|VelenPublicWebCrawler|Webzio-Extended|YouBot) [OR,NC]
   # IPs
+  RewriteCond %{REMOTE_ADDR} ^44\.221\.181\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.241\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.242\. [OR]
