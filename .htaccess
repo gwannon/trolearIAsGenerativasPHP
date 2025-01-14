@@ -8,7 +8,7 @@
   RewriteCond %{HTTP_USER_AGENT} (ClaudeBot|cohere-ai|Diffbot|DuckAssistBot|FacebookBot|FacebookBot|FriendlyCrawler|Google-Extended|GoogleOther) [OR,NC]
   RewriteCond %{HTTP_USER_AGENT} (GoogleOther-Image|GPTBot|ia_archiver|iaskspider|ICC-Crawler|ImagesiftBot|img2dataset|ISSCyberRiskCrawler) [OR,NC]
   RewriteCond %{HTTP_USER_AGENT} (Kangaroo\sBot|Meta-ExternalAgent|Meta-ExternalFetcher|OAI-SearchBot|Omgili|Omgilibot|PanguBot|PerplexityBot) [OR,NC]
-  RewriteCond %{HTTP_USER_AGENT} (PetalBot|Scrapy|Sidetrade\sindexer\sbot|Timpibot|VelenPublicWebCrawler|Webzio-Extended|YouBot|cohere-training-data-crawler) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (PetalBot|Scrapy|Sidetrade\sindexer\sbot|Timpibot|VelenPublicWebCrawler|Webzio-Extended|YouBot|cohere-training-data-crawler|SemrushBot) [OR,NC]
   # IPs
   RewriteCond %{REMOTE_ADDR} ^44\.221\.181\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
@@ -34,7 +34,7 @@
   RewriteCond %{HTTP_USER_AGENT} (ClaudeBot|cohere-ai|Diffbot|DuckAssistBot|FacebookBot|FacebookBot|FriendlyCrawler|Google-Extended|GoogleOther) [OR,NC]
   RewriteCond %{HTTP_USER_AGENT} (GoogleOther-Image|GPTBot|ia_archiver|iaskspider|ICC-Crawler|ImagesiftBot|img2dataset|ISSCyberRiskCrawler) [OR,NC]
   RewriteCond %{HTTP_USER_AGENT} (Kangaroo\sBot|Meta-ExternalAgent|Meta-ExternalFetcher|OAI-SearchBot|Omgili|Omgilibot|PanguBot|PerplexityBot) [OR,NC]
-  RewriteCond %{HTTP_USER_AGENT} (PetalBot|Scrapy|Sidetrade\sindexer\sbot|Timpibot|VelenPublicWebCrawler|Webzio-Extended|YouBot|cohere-training-data-crawler) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (PetalBot|Scrapy|Sidetrade\sindexer\sbot|Timpibot|VelenPublicWebCrawler|Webzio-Extended|YouBot|cohere-training-data-crawler|SemrushBot) [OR,NC]
   # IPs
   RewriteCond %{REMOTE_ADDR} ^44\.221\.181\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
@@ -59,7 +59,7 @@
   RewriteCond %{HTTP_USER_AGENT} (ClaudeBot|cohere-ai|Diffbot|DuckAssistBot|FacebookBot|FacebookBot|FriendlyCrawler|Google-Extended|GoogleOther) [OR,NC]
   RewriteCond %{HTTP_USER_AGENT} (GoogleOther-Image|GPTBot|ia_archiver|iaskspider|ICC-Crawler|ImagesiftBot|img2dataset|ISSCyberRiskCrawler) [OR,NC]
   RewriteCond %{HTTP_USER_AGENT} (Kangaroo\sBot|Meta-ExternalAgent|Meta-ExternalFetcher|OAI-SearchBot|Omgili|Omgilibot|PanguBot|PerplexityBot) [OR,NC]
-  RewriteCond %{HTTP_USER_AGENT} (PetalBot|Scrapy|Sidetrade\sindexer\sbot|Timpibot|VelenPublicWebCrawler|Webzio-Extended|YouBot|cohere-training-data-crawler) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (PetalBot|Scrapy|Sidetrade\sindexer\sbot|Timpibot|VelenPublicWebCrawler|Webzio-Extended|YouBot|cohere-training-data-crawler|SemrushBot) [OR,NC]
   # IPs
   RewriteCond %{REMOTE_ADDR} ^44\.221\.181\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
