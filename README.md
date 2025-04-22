@@ -10,13 +10,15 @@ Sistema sencillo para detectar las IAs generativas que visitan tu web y trolearl
 
 # ¡¡¡¡¡¡¡RECUERDA!!!!!!! Bloquear a ciertos BOTs como Google-Extended puede perjudicar el SEO de tu web.
 
-## Fuentes para detectar IAs
+## Fuente principal para detectar IA
+
+* https://github.com/ai-robots-txt
+
+## Otras fuentes para detectar IAs
 * https://www.ofbit.com/blog/como-proteger-tu-contenido-de-autor-de-las-insaciables-ias
 * https://ericlathrop.com/2024/01/blocking-ai--machine-learning--bots-from-training-on-your-website-content/
 * https://frontendmasters.com/blog/blocking-ai-bots/
 * https://www.foundationwebdev.com/2023/11/which-web-crawlers-are-associated-with-ai-crawlers/
-* https://github.com/ai-robots-txt
-
 
 ## Librerías usadas
 * https://simplehtmldom.sourceforge.io/docs/1.9/index.html
