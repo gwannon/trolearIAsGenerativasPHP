@@ -4,7 +4,16 @@
 
   #HTML--------------------------------------------------
   # User-agents https://github.com/ai-robots-txt
-  RewriteCond %{HTTP_USER_AGENT} (AI2Bot|Ai2Bot\-Dolma|Amazonbot|anthropic\-ai|Applebot|Applebot\-Extended|Brightbot\ 1\.0|Bytespider|CCBot|ChatGPT\-User|Claude\-Web|ClaudeBot|cohere\-ai|cohere\-training\-data\-crawler|Crawlspace|Diffbot|DuckAssistBot|FacebookBot|FriendlyCrawler|Google\-Extended|GoogleOther|GoogleOther\-Image|GoogleOther\-Video|GPTBot|iaskspider/2\.0|ICC\-Crawler|ImagesiftBot|img2dataset|imgproxy|ISSCyberRiskCrawler|Kangaroo\ Bot|Meta\-ExternalAgent|Meta\-ExternalFetcher|OAI\-SearchBot|omgili|omgilibot|PanguBot|Perplexity\-User|PerplexityBot|PetalBot|Scrapy|SemrushBot\-OCOB|SemrushBot\-SWA|Sidetrade\ indexer\ bot|Timpibot|VelenPublicWebCrawler|Webzio\-Extended|YouBot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (AI2Bot|Ai2Bot\-Dolma|aiHitBot|Amazonbot|anthropic\-ai|Applebot|Applebot\-Extended|Brightbot\ 1\.0) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Bytespider|CCBot|ChatGPT\-User|Claude\-SearchBot|Claude\-User|Claude\-Web|ClaudeBot|cohere\-ai) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (cohere\-training\-data\-crawler|Cotoyogi|Crawlspace|Diffbot|DuckAssistBot|FacebookBot|Factset_spyderbot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (FirecrawlAgent|FriendlyCrawler|Google\-CloudVertexBot|Google\-Extended|GoogleOther|GoogleOther\-Image) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (GoogleOther\-Video|GPTBot|iaskspider/2\.0|ICC\-Crawler|ImagesiftBot|img2dataset|imgproxy) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (ISSCyberRiskCrawler|Kangaroo\ Bot|meta\-externalagent|Meta\-ExternalAgent|meta\-externalfetcher) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Meta\-ExternalFetcher|MistralAI\-User/1\.0|NovaAct|OAI\-SearchBot|omgili|omgilibot|Operator|PanguBot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Perplexity\-User|PerplexityBot|PetalBot|QualifiedBot|Scrapy|SemrushBot\-OCOB|SemrushBot\-SWA) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Sidetrade\ indexer\ bot|TikTokSpider|Timpibot|VelenPublicWebCrawler|Webzio\-Extended|wpbot|YouBot) [OR,NC]
+
   # IPs
   RewriteCond %{REMOTE_ADDR} ^44\.221\.181\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
@@ -26,7 +35,16 @@
 
   #CSS--------------------------------------------------
   # User-agents https://github.com/ai-robots-txt
-  RewriteCond %{HTTP_USER_AGENT} (AI2Bot|Ai2Bot\-Dolma|Amazonbot|anthropic\-ai|Applebot|Applebot\-Extended|Brightbot\ 1\.0|Bytespider|CCBot|ChatGPT\-User|Claude\-Web|ClaudeBot|cohere\-ai|cohere\-training\-data\-crawler|Crawlspace|Diffbot|DuckAssistBot|FacebookBot|FriendlyCrawler|Google\-Extended|GoogleOther|GoogleOther\-Image|GoogleOther\-Video|GPTBot|iaskspider/2\.0|ICC\-Crawler|ImagesiftBot|img2dataset|imgproxy|ISSCyberRiskCrawler|Kangaroo\ Bot|Meta\-ExternalAgent|Meta\-ExternalFetcher|OAI\-SearchBot|omgili|omgilibot|PanguBot|Perplexity\-User|PerplexityBot|PetalBot|Scrapy|SemrushBot\-OCOB|SemrushBot\-SWA|Sidetrade\ indexer\ bot|Timpibot|VelenPublicWebCrawler|Webzio\-Extended|YouBot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (AI2Bot|Ai2Bot\-Dolma|aiHitBot|Amazonbot|anthropic\-ai|Applebot|Applebot\-Extended|Brightbot\ 1\.0) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Bytespider|CCBot|ChatGPT\-User|Claude\-SearchBot|Claude\-User|Claude\-Web|ClaudeBot|cohere\-ai) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (cohere\-training\-data\-crawler|Cotoyogi|Crawlspace|Diffbot|DuckAssistBot|FacebookBot|Factset_spyderbot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (FirecrawlAgent|FriendlyCrawler|Google\-CloudVertexBot|Google\-Extended|GoogleOther|GoogleOther\-Image) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (GoogleOther\-Video|GPTBot|iaskspider/2\.0|ICC\-Crawler|ImagesiftBot|img2dataset|imgproxy) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (ISSCyberRiskCrawler|Kangaroo\ Bot|meta\-externalagent|Meta\-ExternalAgent|meta\-externalfetcher) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Meta\-ExternalFetcher|MistralAI\-User/1\.0|NovaAct|OAI\-SearchBot|omgili|omgilibot|Operator|PanguBot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Perplexity\-User|PerplexityBot|PetalBot|QualifiedBot|Scrapy|SemrushBot\-OCOB|SemrushBot\-SWA) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Sidetrade\ indexer\ bot|TikTokSpider|Timpibot|VelenPublicWebCrawler|Webzio\-Extended|wpbot|YouBot) [OR,NC]
+
   # IPs
   RewriteCond %{REMOTE_ADDR} ^44\.221\.181\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
@@ -47,7 +65,16 @@
 
   #IMAGES--------------------------------------------------
   # User-agents https://github.com/ai-robots-txt
-  RewriteCond %{HTTP_USER_AGENT} (AI2Bot|Ai2Bot\-Dolma|Amazonbot|anthropic\-ai|Applebot|Applebot\-Extended|Brightbot\ 1\.0|Bytespider|CCBot|ChatGPT\-User|Claude\-Web|ClaudeBot|cohere\-ai|cohere\-training\-data\-crawler|Crawlspace|Diffbot|DuckAssistBot|FacebookBot|FriendlyCrawler|Google\-Extended|GoogleOther|GoogleOther\-Image|GoogleOther\-Video|GPTBot|iaskspider/2\.0|ICC\-Crawler|ImagesiftBot|img2dataset|imgproxy|ISSCyberRiskCrawler|Kangaroo\ Bot|Meta\-ExternalAgent|Meta\-ExternalFetcher|OAI\-SearchBot|omgili|omgilibot|PanguBot|Perplexity\-User|PerplexityBot|PetalBot|Scrapy|SemrushBot\-OCOB|SemrushBot\-SWA|Sidetrade\ indexer\ bot|Timpibot|VelenPublicWebCrawler|Webzio\-Extended|YouBot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (AI2Bot|Ai2Bot\-Dolma|aiHitBot|Amazonbot|anthropic\-ai|Applebot|Applebot\-Extended|Brightbot\ 1\.0) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Bytespider|CCBot|ChatGPT\-User|Claude\-SearchBot|Claude\-User|Claude\-Web|ClaudeBot|cohere\-ai) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (cohere\-training\-data\-crawler|Cotoyogi|Crawlspace|Diffbot|DuckAssistBot|FacebookBot|Factset_spyderbot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (FirecrawlAgent|FriendlyCrawler|Google\-CloudVertexBot|Google\-Extended|GoogleOther|GoogleOther\-Image) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (GoogleOther\-Video|GPTBot|iaskspider/2\.0|ICC\-Crawler|ImagesiftBot|img2dataset|imgproxy) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (ISSCyberRiskCrawler|Kangaroo\ Bot|meta\-externalagent|Meta\-ExternalAgent|meta\-externalfetcher) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Meta\-ExternalFetcher|MistralAI\-User/1\.0|NovaAct|OAI\-SearchBot|omgili|omgilibot|Operator|PanguBot) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Perplexity\-User|PerplexityBot|PetalBot|QualifiedBot|Scrapy|SemrushBot\-OCOB|SemrushBot\-SWA) [OR,NC]
+  RewriteCond %{HTTP_USER_AGENT} (Sidetrade\ indexer\ bot|TikTokSpider|Timpibot|VelenPublicWebCrawler|Webzio\-Extended|wpbot|YouBot) [OR,NC]
+  
   # IPs
   RewriteCond %{REMOTE_ADDR} ^44\.221\.181\. [OR]
   RewriteCond %{REMOTE_ADDR} ^20\.15\.240\. [OR]
