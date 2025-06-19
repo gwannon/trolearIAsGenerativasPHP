@@ -47,6 +47,35 @@ $str = $dom->save();
 echo $str;
 echo "<!-- Trolled!!!! -->";
 
+//Guardamos log----------------------------------------
+if(!empty($_SERVER['HTTP_CLIENT_IP'])) {
+ $ip = $_SERVER['HTTP_CLIENT_IP'];
+} 
+else if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+ $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+} 
+else {
+ $ip = $_SERVER['REMOTE_ADDR'];
+}
+
+$json = json_decode(file_get_contents("http://ip-api.com/json/".$ip));
+
+//echo date("Y-m-d H:i:s")."|".$ip."|".$_SERVER['HTTP_USER_AGENT'];
+
+$log = date("Y-m-d H:i:s")."|".
+  $ip."|".
+  $_SERVER['HTTP_REFERER']."|".
+  (isset($json->status) && $json->status == 'success' ? $json->country."|".$json->city : "")."|".
+  (isset($json->status) && $json->status == 'success' ? (isset($json->isp) ? $json->isp : "")." / ".(isset($json->org) ? $json->org : "")." / ".(isset($json->as) ? $json->as : "") : "")."|".
+  $_SERVER['HTTP_USER_AGENT']."\n";
+
+$f = fopen("./log.txt", "a+");
+fwrite($f, $log);
+fclose($f);
+
+echo "<!-- ".$log." -->";
+
+
 function get_site_html($site_url) {
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_COOKIESESSION, true);
